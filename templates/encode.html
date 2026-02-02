@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encode Secret</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Encode Secret Message</h2>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form method="post" enctype="multipart/form-data">
+            <p>
+                <label>Enter Secret Message:</label>
+                <textarea name="secret_text" rows="5"></textarea>
+            </p>
+
+            <p style="text-align:center;">— OR —</p>
+
+            <p>
+                <label>Upload Secret Text File (.txt):</label>
+                <input type="file" name="secret_file">
+            </p>
+
+            <p style="text-align:center;">
+                <button type="submit">Encode & Download Font</button>
+            </p>
+        </form>
+
+        <p style="text-align:center;"><a href="/">Back to Home</a></p>
+    </div>
+</body>
+</html>

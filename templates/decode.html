@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decode Secret</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Decode Secret Message</h2>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        {% if recovered %}
+            <div class="success-box">
+                <strong>Recovered Secret:</strong><br><br>
+                {{ recovered }}
+            </div>
+        {% endif %}
+
+        <form method="post" enctype="multipart/form-data">
+            <p>
+                <label>Upload Stego Font (.ttf):</label>
+                <input type="file" name="stego_font" required>
+            </p>
+
+            <p style="text-align:center;">
+                <button type="submit">Decode</button>
+            </p>
+        </form>
+
+        <p style="text-align:center;"><a href="/">Back to Home</a></p>
+    </div>
+</body>
+</html>

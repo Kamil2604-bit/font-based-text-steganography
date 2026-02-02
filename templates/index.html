@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Font Steganography Web App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Font Steganography</h1>
+        <p style="text-align:center;">
+            Covert communication using font-internal metadata
+        </p>
+
+        <ul style="text-align:center; list-style:none; padding:0;">
+            <li><a href="/encode">Encode Secret</a></li>
+            <li><a href="/decode">Decode Secret</a></li>
+        </ul>
+    </div>
+</body>
+</html>
